@@ -48,5 +48,15 @@ class CalculatorViewController: UIViewController {
         brain.performOperation(sender.titleLabel?.text ?? "")
         result = brain.result
     }
+    
+    @IBAction func CEButtonTapped(_ sender: Any) {
+        if userIsTyping {
+            var resultText = String(Int(result))
+            resultText.removeLast()
+            result = NSString(string: resultText).doubleValue
+        }
+    }
+    
+    
 }
 

@@ -84,6 +84,9 @@
                                                     </backgroundConfiguration>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="CEButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vur-rj-DwO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="gTr-md-TFG"/>
