@@ -20,10 +20,10 @@ class CalculatorBrain {
     
     var operations: Dictionary<String, Operation> = [
         "√": Operation.UnaryOperation(sqrt),
-        "+": Operation.BinaryOperation(add),
-        "-": Operation.BinaryOperation(sub),
-        "*": Operation.BinaryOperation(multiply),
-        "/": Operation.BinaryOperation(divide),
+        "+": Operation.BinaryOperation({ $0 + $1 }),
+        "-": Operation.BinaryOperation({ $0 - $1 }),
+        "*": Operation.BinaryOperation({ $0 * $1 }),
+        "/": Operation.BinaryOperation({ $0 / $1 }),
         "=": Operation.Equals
     ]
 
@@ -67,23 +67,4 @@ class CalculatorBrain {
     }
     
     
-}
-
-
-// MARK: - Math Functions
-
-func add(num1: Double, num2: Double) -> Double {
-    return num1 + num2
-}
-
-func sub(num1: Double, num2: Double) -> Double {
-    return num1 - num2
-}
-
-func multiply(num1: Double, num2: Double) -> Double {
-    return num1 * num2
-}
-
-func divide(num1: Double, num2: Double) -> Double {
-    return num1 / num2
 }
