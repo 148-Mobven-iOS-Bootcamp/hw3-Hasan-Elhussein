@@ -13,7 +13,7 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet var digitButtons: [UIButton]!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,7 +28,7 @@ class CalculatorViewController: UIViewController {
         get { return Double(resultLabel.text ?? "0.0") ?? 0.0 }
         set { resultLabel.text = String(newValue) }
     }
-
+    
     
     // MARK: - IBActions
     

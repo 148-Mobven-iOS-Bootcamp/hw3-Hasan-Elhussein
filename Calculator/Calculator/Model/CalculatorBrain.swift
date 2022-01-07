@@ -34,7 +34,7 @@ class CalculatorBrain {
     // Function to perform the selected operation
     func performOperation(_ symbol: String) {
         guard let operation = operations[symbol] else { return }
-
+        
         switch operation {
         case .UnaryOperation(let function):
             accumulator = function(accumulator)
