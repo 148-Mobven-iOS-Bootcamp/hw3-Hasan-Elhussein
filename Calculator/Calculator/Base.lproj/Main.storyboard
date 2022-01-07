@@ -22,7 +22,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gD-mF-nzR">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xu-sm-x19">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xu-sm-x19">
                                                 <rect key="frame" x="10" y="0.0" width="294" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -84,9 +84,6 @@
                                                     </backgroundConfiguration>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="operationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Fy-sD-txY"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="gTr-md-TFG"/>

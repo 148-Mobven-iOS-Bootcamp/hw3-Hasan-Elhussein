@@ -12,19 +12,21 @@ class CalculatorBrain {
     //standford university ios 9 > youtube video 1 ya da 2
     private var accumulator: Double = 0
     
-    enum Operation {
+    private enum Operation {
         case UnaryOperation((Double) -> Double)
         case BinaryOperation((Double, Double) -> Double)
         case Equals
+        case C
     }
     
-    var operations: Dictionary<String, Operation> = [
+    private var operations: Dictionary<String, Operation> = [
         "√": Operation.UnaryOperation(sqrt),
         "+": Operation.BinaryOperation({ $0 + $1 }),
         "-": Operation.BinaryOperation({ $0 - $1 }),
         "*": Operation.BinaryOperation({ $0 * $1 }),
         "/": Operation.BinaryOperation({ $0 / $1 }),
-        "=": Operation.Equals
+        "=": Operation.Equals,
+        "C": Operation.C
     ]
 
     func performOperation(_ symbol: String) {
@@ -38,13 +40,15 @@ class CalculatorBrain {
             pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
         case .Equals:
             executePendingBinaryOperation()
-            
+        case .C:
+            executePendingBinaryOperation()
+            accumulator = 0
         }
     }
     
     private var pending: PendingBinaryOperationInfo?
     
-    struct PendingBinaryOperationInfo {
+    private struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
     }
