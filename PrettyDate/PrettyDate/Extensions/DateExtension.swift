@@ -9,7 +9,7 @@ import Foundation
 
 extension Date {
     
-    var prettyDate: String { // returns a String of prettyDate
+    var dateAsPrettyString: String { // returns a String of dataAsPrettyString
         return configureDateFormatter(self, "dd<>MM<>yyyy")
     }
     
