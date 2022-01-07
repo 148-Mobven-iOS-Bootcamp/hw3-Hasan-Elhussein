@@ -8,10 +8,11 @@
 import Foundation
 
 class CalculatorBrain {
-    //istenen işlemler + - * / bonus C CE =
-    //standford university ios 9 > youtube video 1 ya da 2
+    
+    // Accumulator variable
     private var accumulator: Double = 0
     
+    // Enum for the type of operation
     private enum Operation {
         case UnaryOperation((Double) -> Double)
         case BinaryOperation((Double, Double) -> Double)
@@ -19,6 +20,7 @@ class CalculatorBrain {
         case C
     }
     
+    // Operations dictionary
     private var operations: Dictionary<String, Operation> = [
         "√": Operation.UnaryOperation(sqrt),
         "+": Operation.BinaryOperation({ $0 + $1 }),
@@ -28,10 +30,11 @@ class CalculatorBrain {
         "=": Operation.Equals,
         "C": Operation.C
     ]
-
+    
+    // Function to perform the selected operation
     func performOperation(_ symbol: String) {
         guard let operation = operations[symbol] else { return }
-
+        
         switch operation {
         case .UnaryOperation(let function):
             accumulator = function(accumulator)
@@ -46,13 +49,16 @@ class CalculatorBrain {
         }
     }
     
+    // pending variable
     private var pending: PendingBinaryOperationInfo?
     
+    // Structure for the pending binary operation info
     private struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
     }
     
+    // Function for Equals operation
     func executePendingBinaryOperation() {
         if pending != nil {
             accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
@@ -60,12 +66,14 @@ class CalculatorBrain {
         }
     }
     
+    // Get result value
     var result: Double {
         get {
             return accumulator
         }
     }
-
+    
+    // Set operand value
     func setOperand(_ value: Double) {
         accumulator = value
     }
