@@ -10,11 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     
     // IBOutlets
-    @IBOutlet weak var prettyDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
-    // Variables
-    let dateFormatter = DateFormatter()
+    @IBOutlet weak var prettyDateLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +25,11 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
-        // Set dateLabel to the date taken from UIDatePicker
+        // Set the labels to the date taken from UIDatePicker
         prettyDateLabel.text = sender.date.prettyDate
-        
+        dayLabel.text = sender.date.day
+        monthLabel.text = sender.date.month
+        yearLabel.text = sender.date.year
     }
     
 }
