@@ -11,23 +11,32 @@ class CalculatorBrain {
     //istenen işlemler + - * / bonus C CE =
     //standford university ios 9 > youtube video 1 ya da 2
     private var accumulator: Double = 0
-
-    var result: Double {
-        get {
-            return accumulator
-        }
+    
+    enum Operation {
+        case UnaryOperation((Double) -> Double)
+        case BinaryOperation
+        case Equals
     }
+    
+    var operations: Dictionary<String, Operation> = [
+        "√": Operation.UnaryOperation(sqrt)
+    ]
 
-    func performOperation(_ operation: String?) {
-        guard let operation = operation else { return }
+    func performOperation(_ symbol: String) {
+        guard let operation = operations[symbol] else { return }
 
         switch operation {
-        case "√":
-            accumulator = sqrt(result)
-        case "=":
+        case .UnaryOperation(let function): accumulator = function(accumulator)
+        case .Equals:
             break
         default:
             break
+        }
+    }
+    
+    var result: Double {
+        get {
+            return accumulator
         }
     }
 
