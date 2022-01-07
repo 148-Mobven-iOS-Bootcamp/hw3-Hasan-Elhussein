@@ -8,29 +8,31 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var resultLabel: UILabel!
-
     @IBOutlet var digitButtons: [UIButton]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    // MARK: - Variables
+    
     private var userIsTyping = false
-
     private var brain = CalculatorBrain()
-
+    
     var result: Double {
-        get {
-            return Double(resultLabel.text ?? "0.0") ?? 0.0
-        }
-        set {
-            resultLabel.text = String(newValue)
-        }
+        get { return Double(resultLabel.text ?? "0.0") ?? 0.0 }
+        set { resultLabel.text = String(newValue) }
     }
 
+    
+    // MARK: - IBActions
+    
+    // If a diggit button is tapped
     @IBAction func digitButtonTapped(_ sender: UIButton) {
         if userIsTyping {
             var resultText = String(Int(result))
@@ -41,7 +43,8 @@ class CalculatorViewController: UIViewController {
             userIsTyping.toggle()
         }
     }
-
+    
+    // If an operation button is tapped
     @IBAction func operationButtonTapped(_ sender: UIButton) {
         userIsTyping = false
         brain.setOperand(result)
@@ -49,6 +52,7 @@ class CalculatorViewController: UIViewController {
         result = brain.result
     }
     
+    // If the CE button is tapped
     @IBAction func CEButtonTapped(_ sender: Any) {
         if userIsTyping {
             var resultText = String(Int(result))
