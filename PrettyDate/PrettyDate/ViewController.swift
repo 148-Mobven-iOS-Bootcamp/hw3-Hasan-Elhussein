@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // IBOutlets
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var prettyDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
     // Variables
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         // Set dateLabel to the date taken from UIDatePicker
-        dateLabel.text = sender.date.prettyDate
+        prettyDateLabel.text = sender.date.prettyDate
         
     }
     

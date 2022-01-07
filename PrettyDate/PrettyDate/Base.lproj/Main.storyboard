@@ -23,13 +23,49 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zh-ad-eaQ">
-                                <rect key="frame" x="20" y="134" width="126" height="30"/>
+                                <rect key="frame" x="20" y="44" width="300" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07&lt;&gt;01&lt;&gt;2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAj-yv-jgV">
-                                <rect key="frame" x="104.5" y="234" width="205.5" height="33.5"/>
+                                <rect key="frame" x="104.5" y="82" width="205.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z88-Xk-7eT">
+                                <rect key="frame" x="190" y="187" width="34" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoh-zJ-4ik">
+                                <rect key="frame" x="191.5" y="292" width="31.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKv-RS-ZvO">
+                                <rect key="frame" x="20" y="149" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtK-aJ-V7a">
+                                <rect key="frame" x="20" y="254" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuy-2f-7WW">
+                                <rect key="frame" x="20" y="359" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t70-Ka-tSR">
+                                <rect key="frame" x="172.5" y="397" width="69" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,19 +74,35 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4zh-ad-eaQ" secondAttribute="trailing" constant="268" id="2Ew-fi-0Es"/>
-                            <constraint firstItem="4zh-ad-eaQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="MG7-Ba-gIF"/>
+                            <constraint firstItem="jKv-RS-ZvO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1s9-3O-ymc"/>
+                            <constraint firstItem="z88-Xk-7eT" firstAttribute="top" secondItem="jKv-RS-ZvO" secondAttribute="bottom" constant="8" symbolic="YES" id="47U-9r-T3W"/>
+                            <constraint firstItem="EtK-aJ-V7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="497-yY-FGW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EtK-aJ-V7a" secondAttribute="trailing" constant="94" id="6mU-Lr-9ak"/>
+                            <constraint firstItem="EtK-aJ-V7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ApM-H7-kz2"/>
+                            <constraint firstItem="z88-Xk-7eT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LWz-qG-FFV"/>
+                            <constraint firstItem="4zh-ad-eaQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MG7-Ba-gIF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nN0-0E-dli" secondAttribute="trailing" constant="20" id="Mbd-bY-f3b"/>
-                            <constraint firstItem="HAj-yv-jgV" firstAttribute="top" secondItem="4zh-ad-eaQ" secondAttribute="bottom" constant="70" id="bq2-yc-Gfi"/>
+                            <constraint firstItem="zuy-2f-7WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NlA-PC-Mxn"/>
+                            <constraint firstItem="t70-Ka-tSR" firstAttribute="top" secondItem="zuy-2f-7WW" secondAttribute="bottom" constant="8" symbolic="YES" id="P04-Tj-ZbS"/>
+                            <constraint firstItem="jKv-RS-ZvO" firstAttribute="top" secondItem="4zh-ad-eaQ" secondAttribute="bottom" constant="75" id="UV3-gZ-MzP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jKv-RS-ZvO" secondAttribute="trailing" constant="94" id="a5e-5H-baz"/>
+                            <constraint firstItem="EtK-aJ-V7a" firstAttribute="top" secondItem="jKv-RS-ZvO" secondAttribute="bottom" constant="75" id="bBY-G4-l29"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4zh-ad-eaQ" secondAttribute="trailing" constant="94" id="bXF-fw-OLx"/>
                             <constraint firstItem="nN0-0E-dli" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eOe-y9-3Hk"/>
+                            <constraint firstItem="zuy-2f-7WW" firstAttribute="top" secondItem="EtK-aJ-V7a" secondAttribute="bottom" constant="75" id="fBa-Ae-cBi"/>
+                            <constraint firstItem="t70-Ka-tSR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzj-Ff-cJO"/>
                             <constraint firstItem="nN0-0E-dli" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hMv-rI-uxQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zuy-2f-7WW" secondAttribute="trailing" constant="94" id="lXd-dX-ix4"/>
                             <constraint firstItem="4zh-ad-eaQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m1J-hc-iC3"/>
                             <constraint firstItem="HAj-yv-jgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pIi-LU-8fi"/>
+                            <constraint firstItem="aoh-zJ-4ik" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sI4-US-WaX"/>
+                            <constraint firstItem="HAj-yv-jgV" firstAttribute="top" secondItem="4zh-ad-eaQ" secondAttribute="bottom" constant="8" symbolic="YES" id="sT3-GZ-2tc"/>
+                            <constraint firstItem="aoh-zJ-4ik" firstAttribute="top" secondItem="EtK-aJ-V7a" secondAttribute="bottom" constant="8" symbolic="YES" id="wOd-GR-wXl"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="HAj-yv-jgV" id="4aU-SR-ZYn"/>
                         <outlet property="datePicker" destination="nN0-0E-dli" id="2sx-E9-tNy"/>
+                        <outlet property="prettyDateLabel" destination="HAj-yv-jgV" id="4aU-SR-ZYn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
