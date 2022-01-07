@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="nN0-0E-dli">
-                                <rect key="frame" x="20" y="511" width="374" height="351"/>
+                                <rect key="frame" x="20" y="510.5" width="374" height="351.5"/>
                                 <connections>
                                     <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mht-oJ-ihe"/>
                                 </connections>
