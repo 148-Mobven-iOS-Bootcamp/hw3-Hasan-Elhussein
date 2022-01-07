@@ -17,7 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="nN0-0E-dli">
-                                <rect key="frame" x="20" y="481.5" width="374" height="380.5"/>
+                                <rect key="frame" x="20" y="482" width="374" height="380"/>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mht-oJ-ihe"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zh-ad-eaQ">
                                 <rect key="frame" x="20" y="134" width="126" height="30"/>
@@ -45,6 +48,10 @@
                             <constraint firstItem="HAj-yv-jgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pIi-LU-8fi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="HAj-yv-jgV" id="4aU-SR-ZYn"/>
+                        <outlet property="datePicker" destination="nN0-0E-dli" id="2sx-E9-tNy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
