@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         // Set the labels to the date taken from UIDatePicker
-        prettyDateLabel.text = sender.date.prettyDate
+        prettyDateLabel.text = sender.date.dateAsPrettyString
         dayLabel.text = sender.date.day
         monthLabel.text = sender.date.month
         yearLabel.text = sender.date.year
