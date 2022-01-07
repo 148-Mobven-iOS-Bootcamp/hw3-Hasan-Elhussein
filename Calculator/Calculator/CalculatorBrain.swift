@@ -14,23 +14,45 @@ class CalculatorBrain {
     
     enum Operation {
         case UnaryOperation((Double) -> Double)
-        case BinaryOperation
+        case BinaryOperation((Double, Double) -> Double)
         case Equals
     }
     
     var operations: Dictionary<String, Operation> = [
-        "√": Operation.UnaryOperation(sqrt)
+        "√": Operation.UnaryOperation(sqrt),
+        "+": Operation.BinaryOperation(add),
+        "-": Operation.BinaryOperation(sub),
+        "*": Operation.BinaryOperation(multiply),
+        "/": Operation.BinaryOperation(divide),
+        "=": Operation.Equals
     ]
 
     func performOperation(_ symbol: String) {
         guard let operation = operations[symbol] else { return }
 
         switch operation {
-        case .UnaryOperation(let function): accumulator = function(accumulator)
+        case .UnaryOperation(let function):
+            accumulator = function(accumulator)
+        case .BinaryOperation(let function):
+            executePendingBinaryOperation()
+            pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
         case .Equals:
-            break
-        default:
-            break
+            executePendingBinaryOperation()
+            
+        }
+    }
+    
+    private var pending: PendingBinaryOperationInfo?
+    
+    struct PendingBinaryOperationInfo {
+        var binaryFunction: (Double, Double) -> Double
+        var firstOperand: Double
+    }
+    
+    func executePendingBinaryOperation() {
+        if pending != nil {
+            accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
+            pending = nil
         }
     }
     
@@ -43,4 +65,25 @@ class CalculatorBrain {
     func setOperand(_ value: Double) {
         accumulator = value
     }
+    
+    
+}
+
+
+// MARK: - Math Functions
+
+func add(num1: Double, num2: Double) -> Double {
+    return num1 + num2
+}
+
+func sub(num1: Double, num2: Double) -> Double {
+    return num1 - num2
+}
+
+func multiply(num1: Double, num2: Double) -> Double {
+    return num1 * num2
+}
+
+func divide(num1: Double, num2: Double) -> Double {
+    return num1 / num2
 }
