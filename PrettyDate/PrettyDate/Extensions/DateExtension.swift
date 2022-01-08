@@ -24,16 +24,17 @@ extension Date {
     var year: String { // returns a String of year
         return configureDateFormatter(self, "yyyy")
     }
+ 
     
-}
+    // MARK: - Functions
 
-
-// MARK: - Functions
-
-// Configure dateFormatter with given format
-func configureDateFormatter(_ date: Date, _ format: String) -> String{
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = format
+    // Configure dateFormatter with given format
+    private func configureDateFormatter(_ date: Date, _ format: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        
+        return dateFormatter.string(from: date)
+    }
     
-    return dateFormatter.string(from: date)
+    
 }
